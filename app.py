@@ -4,19 +4,15 @@ from werkzeug.utils import secure_filename
 import uuid
 from dotenv import load_dotenv
 
-# Yardımcı fonksiyonlar
 from utils.generate_image import generate_image_from_text
 from utils.style_transfer import apply_style_transfer
 
-# Ortam değişkenlerini yükle (.env içinden HF_TOKEN vs.)
 load_dotenv()
 
-# Flask uygulaması
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 app.config['OUTPUT_FOLDER'] = 'static/outputs'
 
-# Gerekli klasörleri oluştur
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 os.makedirs(app.config['OUTPUT_FOLDER'], exist_ok=True)
 
@@ -27,14 +23,14 @@ def index():
         mode = request.form.get('mode')  # "text" ya da "image"
         artist = request.form.get('artist')  # "monet", "vangogh", "munch"
 
-        # ✅ Cümle ile üretim
+        # Cümle ile üretim
         if mode == "text":
             user_text = request.form.get('user_text')
             if not user_text:
                 return render_template("index.html", output_image=None)
             output_path = generate_image_from_text(user_text, artist)
 
-        # ✅ Görsel yükleyerek stil dönüşümü
+        # Görsel yükleyerek stil dönüşümü
         elif mode == "image":
             image = request.files['image']
             if not image:
