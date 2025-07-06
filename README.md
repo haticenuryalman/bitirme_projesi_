@@ -7,7 +7,7 @@ Bu proje, kullanıcıların yazdığı duygusal metinleri veya yüklediği görs
 Proje, GPT-4 Turbo, Stable Diffusion ve CUT (Contrastive Unpaired Translation) modellerinin entegrasyonu ile çalışmaktadır.
 
 
-##  Özellikler
+# Özellikler
 
 - Duygusal veya betimleyici metinden sahne üretimi (GPT destekli)
 - Stable Diffusion ile metne uygun görsel üretimi
