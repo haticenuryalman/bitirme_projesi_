@@ -15,7 +15,59 @@ Proje, GPT-4 Turbo, Stable Diffusion ve CUT (Contrastive Unpaired Translation) m
 - Kullanıcının yüklediği herhangi bir görselin sanatçı stiline dönüştürülmesi
 - Kullanıcı dostu Flask web arayüzü
 
----
+
+## Model Eğitimi
+
+Bu projede Monet, Van Gogh ve Munch için CUT (Contrastive Unpaired Translation) modeli kullanılarak stil transferi gerçekleştirilmiştir.
+
+
+
+## Eğitim Ortamı
+
+Eğitim işlemleri aşağıdaki özelliklere sahip bir ortamda gerçekleştirilmiştir:
+
+- RunPod üzerinde 1 x NVIDIA A100 SXM GPU
+- 16 vCPU, 251 GB RAM
+- Pytorch 2.1, CUDA 11.8, Ubuntu 22.04
+- Depolama: 20 GB disk + 20 GB pod volume
+- Eğitim ortamı: On-Demand – Secure Cloud
+- SSH bağlantısı: VS Code üzerinden
+
+
+## Eğitim Verisi
+
+- `trainA`: Gerçek hayat görselleri (manzara, portre, doğa sahneleri vb.).
+- `trainB`: Sanatçının tabloları
+- Görsel boyutu: 512×512 piksel
+  
+
+
+
+## Eğitim Parametreleri 
+
+Monet ve Munch için:
+bash
+--dataroot ./datasets/monet_style \
+--name cut_monet_final \
+--model cut \
+--n_epochs 150 \
+--n_epochs_decay 150 \
+--batch_size 2 \
+--load_size 512 --crop_size 512 \
+--lambda_identity 0.5 \
+--gpu_ids 0
+
+Van Gogh için: 
+bash
+--dataroot ./datasets/monet_style \
+--name cut_monet_final \
+--model cut \
+--n_epochs 150 \
+--n_epochs_decay 150 \
+--batch_size 2 \
+--load_size 512 --crop_size 512 \
+--lambda_identity 1 \
+--gpu_ids 0
 
 ##  Kurulum
 
@@ -48,62 +100,9 @@ Tarayıcıda şu adrese giderek uygulamayı kullanabilirsiniz:
 
 http://localhost:5000
 
-## Model Eğitimi
-
-Bu projede Monet, Van Gogh ve Munch için CUT (Contrastive Unpaired Translation) modeli kullanılarak stil transferi gerçekleştirilmiştir.
-
----
-
-## Eğitim Ortamı
-
-Eğitim işlemleri aşağıdaki özelliklere sahip bir ortamda gerçekleştirilmiştir:
-
-- **RunPod üzerinde 1 x NVIDIA A100 SXM GPU**
-- 16 vCPU, 251 GB RAM
-- Pytorch 2.1, CUDA 11.8, Ubuntu 22.04
-- Depolama: 20 GB disk + 20 GB pod volume
-- Eğitim ortamı: **On-Demand – Secure Cloud**
-- SSH bağlantısı: VS Code üzerinden
----
-
-## Eğitim Verisi
-
-- `trainA`: Gerçek hayat görselleri (manzara, portre, doğa sahneleri vb.).
-- `trainB`: Sanatçının tabloları
-- Görsel boyutu: 512×512 piksel
-  
----
 
 
-## Eğitim Parametreleri 
-Monet ve Munch için:
-```bash
---dataroot ./datasets/monet_style \
---name cut_monet_final \
---model cut \
---n_epochs 150 \
---n_epochs_decay 150 \
---batch_size 2 \
---load_size 512 --crop_size 512 \
---lambda_identity 0.5 \
---gpu_ids 0
 
-Van Gogh için: 
-```bash
---dataroot ./datasets/monet_style \
---name cut_monet_final \
---model cut \
---n_epochs 150 \
---n_epochs_decay 150 \
---batch_size 2 \
---load_size 512 --crop_size 512 \
---lambda_identity 1 \
---gpu_ids 0
-
-
-Tarayıcıda şu adrese giderek uygulamayı kullanabilirsiniz:
-
-http://localhost:5000
 
 
 
