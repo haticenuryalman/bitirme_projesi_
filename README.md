@@ -6,7 +6,6 @@ Bu proje, kullanıcıların yazdığı duygusal metinleri veya yüklediği görs
 
 Proje, GPT-4 Turbo, Stable Diffusion ve CUT (Contrastive Unpaired Translation) modellerinin entegrasyonu ile çalışmaktadır.
 
----
 
 ##  Özellikler
 
@@ -17,6 +16,37 @@ Proje, GPT-4 Turbo, Stable Diffusion ve CUT (Contrastive Unpaired Translation) m
 - Kullanıcı dostu Flask web arayüzü
 
 ---
+
+##  Kurulum
+
+1. Projeyi GitHub'dan klonlayın:
+
+bash
+git clone https://github.com/haticenuryalman/bitirme_projesi_.git
+cd bitirme_projesi_
+
+
+2. Gerekli dosyaları Drive'dan indirin:
+Proje boyutu kısıtlamalarından dolayı gerekli olan tüm dosyalar GitHub’a yüklenememiştir. Eksik dosyalar için aşağıdaki Google Drive bağlantısını kullanabilirsiniz:
+
+Drive Linki:
+https://drive.google.com/drive/folders/1DISV_y1VAWoDyVXgU8dsC7gF5Nq-v23-?usp=sharing
+
+3.Sanal ortam oluşturun (isteğe bağlı):
+python -m venv venv
+source venv/bin/activate  # (Windows için: venv\Scripts\activate)
+
+4. Gereksinimleri yükleyin:
+pip install -r requirements.txt
+
+5. OpenAI API anahtarını .env dosyasına ekleyin:
+OPENAI_API_KEY=your_openai_key_here
+
+6. Uygulamayı başlatın:
+python app.py
+Tarayıcıda şu adrese giderek uygulamayı kullanabilirsiniz:
+
+http://localhost:5000
 
 ## Model Eğitimi
 
@@ -43,6 +73,8 @@ Eğitim işlemleri aşağıdaki özelliklere sahip bir ortamda gerçekleştirilm
 - Görsel boyutu: 512×512 piksel
   
 ---
+
+
 ## Eğitim Parametreleri 
 Monet ve Munch için:
 ```bash
@@ -68,32 +100,6 @@ Van Gogh için:
 --lambda_identity 1 \
 --gpu_ids 0
 
----
- 
-### Kurulum
-
-1. Projeyi GitHub'dan klonlayın:
-git clone https://github.com/haticenuryalman/bitirme_projesi_.git
-cd bitirme_projesi_
-
-2. Gerekli dosyaları Drive'dan indirin:
-Proje boyutu kısıtlamalarından dolayı gerekli olan tüm dosyalar GitHub’a yüklenememiştir. Eksik dosyalar için aşağıdaki Google Drive bağlantısını kullanabilirsiniz:
-
-Drive Linki:
-https://drive.google.com/drive/folders/1DISV_y1VAWoDyVXgU8dsC7gF5Nq-v23-?usp=sharing
-
-3.Sanal ortam oluşturun (isteğe bağlı):
-python -m venv venv
-source venv/bin/activate  # (Windows için: venv\Scripts\activate)
-
-4. Gereksinimleri yükleyin:
-pip install -r requirements.txt
-
-5. OpenAI API anahtarını .env dosyasına ekleyin:
-OPENAI_API_KEY=your_openai_key_here
-
-6. Uygulamayı başlatın:
-python app.py
 
 Tarayıcıda şu adrese giderek uygulamayı kullanabilirsiniz:
 
