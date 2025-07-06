@@ -77,7 +77,6 @@ bash
 git clone https://github.com/haticenuryalman/bitirme_projesi_.git
 cd bitirme_projesi_
 
-
 2. Gerekli dosyaları Drive'dan indirin:
 Proje boyutu kısıtlamalarından dolayı gerekli olan tüm dosyalar GitHub’a yüklenememiştir. Eksik dosyalar için aşağıdaki Google Drive bağlantısını kullanabilirsiniz:
 
