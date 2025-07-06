@@ -1,6 +1,6 @@
-# bitirme_projesi_
 
-# Emotion2Art: Duygusal Metinlerden Sanatçı Stilinde Görsel Üretim
+
+# Duygusal Metinlerden Sanatçı Stilinde Görsel Üretim
 
 Bu proje, kullanıcıların yazdığı duygusal metinleri veya yüklediği görselleri alarak, ünlü sanatçıların (Monet, Van Gogh, Munch) tarzlarında stilize edilmiş sanat eserleri üretmelerini sağlar. 
 
