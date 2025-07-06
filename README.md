@@ -22,6 +22,8 @@ Proje, GPT-4 Turbo, Stable Diffusion ve CUT (Contrastive Unpaired Translation) m
 
 Bu projede Monet, Van Gogh ve Munch için CUT (Contrastive Unpaired Translation) modeli kullanılarak stil transferi gerçekleştirilmiştir.
 
+---
+
 ## Eğitim Ortamı
 
 Eğitim işlemleri aşağıdaki özelliklere sahip bir ortamda gerçekleştirilmiştir:
@@ -32,13 +34,15 @@ Eğitim işlemleri aşağıdaki özelliklere sahip bir ortamda gerçekleştirilm
 - Depolama: 20 GB disk + 20 GB pod volume
 - Eğitim ortamı: **On-Demand – Secure Cloud**
 - SSH bağlantısı: VS Code üzerinden
-- 
+---
+
 ## Eğitim Verisi
 
 - `trainA`: Gerçek hayat görselleri (manzara, portre, doğa sahneleri vb.).
 - `trainB`: Sanatçının tabloları
 - Görsel boyutu: 512×512 piksel
-- 
+  
+---
 ## Eğitim Parametreleri 
 Monet ve Munch için:
 ```bash
@@ -64,7 +68,9 @@ Van Gogh için:
 --lambda_identity 1 \
 --gpu_ids 0
 
-## Kurulum
+---
+ 
+### Kurulum
 
 1. Projeyi GitHub'dan klonlayın:
 git clone https://github.com/haticenuryalman/bitirme_projesi_.git
