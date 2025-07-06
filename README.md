@@ -49,11 +49,11 @@ Tarayıcıda şu adrese giderek uygulamayı kullanabilirsiniz:
 http://localhost:5000
 ---
 
-## 🧠 Model Eğitimi
+## Model Eğitimi
 
 Bu projede Monet, Van Gogh ve Munch için **CUT (Contrastive Unpaired Translation)** modeli kullanılarak stil transferi gerçekleştirilmiştir.
 
-### 🎯 Eğitim Ortamı
+## Eğitim Ortamı
 
 Eğitim işlemleri aşağıdaki özelliklere sahip bir ortamda gerçekleştirilmiştir:
 
@@ -64,13 +64,13 @@ Eğitim işlemleri aşağıdaki özelliklere sahip bir ortamda gerçekleştirilm
 - Eğitim ortamı: **On-Demand – Secure Cloud**
 - SSH bağlantısı: VS Code üzerinden
 - 
-### 🗂️ Eğitim Verisi
+## Eğitim Verisi
 
 - `trainA`: Gerçek hayat görselleri (manzara, portre, doğa sahneleri vb.).
 - `trainB`: Sanatçının tabloları
 - Görsel boyutu: 512×512 piksel
 - 
-### ⚙️ Eğitim Parametreleri (örnek)
+## Eğitim Parametreleri 
 Monet ve Munch için:
 ```bash
 --dataroot ./datasets/monet_style \
