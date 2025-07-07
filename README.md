@@ -1,6 +1,6 @@
 
 
-# Duygusal Metinlerden Sanatçı Stilinde Görsel Üretim
+# Yapay Zeka ile Dijital Sanat Üretimi
 
 Bu proje, kullanıcıların yazdığı duygusal metinleri veya yüklediği görselleri alarak, ünlü sanatçıların (Monet, Van Gogh, Munch) tarzlarında stilize edilmiş sanat eserleri üretmelerini sağlar. 
 
