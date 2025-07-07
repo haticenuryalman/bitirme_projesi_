@@ -1,6 +1,6 @@
 
 
-# Yapay Zeka ile Dijital Sanat Üretimi
+# StyleFusionAI
 
 Bu proje, kullanıcıların yazdığı duygusal metinleri veya yüklediği görselleri alarak, ünlü sanatçıların (Monet, Van Gogh, Munch) tarzlarında stilize edilmiş sanat eserleri üretmelerini sağlar. 
 
