@@ -80,8 +80,8 @@ Due to GitHub file size limitations, some files are stored externally.
 Access the missing files here:  
 https://drive.google.com/drive/folders/1DISV_y1VAWoDyVXgU8dsC7gF5Nq-v23-?usp=sharing  
 
-3.(Optional) Create a virtual environment:
-python -m venv venv
+3. Create a virtual environment(Optional):  
+python -m venv venv  
 source venv/bin/activate  # (On Windows : venv\Scripts\activate)  
 
 4. Install dependencies:
