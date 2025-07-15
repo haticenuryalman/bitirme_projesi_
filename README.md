@@ -97,6 +97,7 @@ OPENAI_API_KEY=your_openai_key_here
 python app.py
 Tarayıcıda şu adrese giderek uygulamayı kullanabilirsiniz:
 
+
 http://localhost:5000
 
 
