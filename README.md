@@ -2,50 +2,48 @@
 
 # StyleFusionAI
 
-Bu proje, kullanıcıların yazdığı duygusal metinleri veya yüklediği görselleri alarak, ünlü sanatçıların (Monet, Van Gogh, Munch) tarzlarında stilize edilmiş sanat eserleri üretmelerini sağlar. 
+This project enables users to create stylized artworks in the styles of famous painters (Monet, Van Gogh, Munch) by either generating visual scenes from emotional or descriptive text or uploading their own images.
 
-Proje, GPT-4 Turbo, Stable Diffusion ve CUT (Contrastive Unpaired Translation) modellerinin entegrasyonu ile çalışmaktadır.
-
-
-## Özellikler
-
-- Duygusal veya betimleyici metinden sahne üretimi (GPT destekli)
-- Stable Diffusion ile metne uygun görsel üretimi
-- Monet, Van Gogh veya Munch stilinde CUT modeli ile stil aktarımı
-- Kullanıcının yüklediği herhangi bir görselin sanatçı stiline dönüştürülmesi
-- Kullanıcı dostu Flask web arayüzü
+The system integrates GPT-4 Turbo, Stable Diffusion, and CUT (Contrastive Unpaired Translation) models to perform style transfer and image generation tasks.
 
 
-## Model Eğitimi
+## Features
 
-Bu projede Monet, Van Gogh ve Munch için CUT (Contrastive Unpaired Translation) modeli kullanılarak stil transferi gerçekleştirilmiştir.
+-Text-to-scene generation from emotional or descriptive input (GPT-powered)
+-Visual scene creation using Stable Diffusion
+-Style transfer using CUT model in Monet, Van Gogh, or Munch styles
+-Style transformation of user-uploaded images
+-User-friendly web interface built with Flask
 
+## Style Transfer Model Training
 
-
-## Eğitim Ortamı
-
-Eğitim işlemleri aşağıdaki özelliklere sahip bir ortamda gerçekleştirilmiştir:
-
-- RunPod üzerinde 1 x NVIDIA A100 SXM GPU
-- 16 vCPU, 251 GB RAM
-- Pytorch 2.1, CUDA 11.8, Ubuntu 22.04
-- Depolama: 20 GB disk + 20 GB pod volume
-- Eğitim ortamı: On-Demand – Secure Cloud
-- SSH bağlantısı: VS Code üzerinden
+Style transfer is implemented using the CUT model trained separately for each artist: Monet, Van Gogh, and Munch.
 
 
-## Eğitim Verisi
 
-- `trainA`: Gerçek hayat görselleri (manzara, portre, doğa sahneleri vb.).
-- `trainB`: Sanatçının tabloları
-- Görsel boyutu: 512×512 piksel
+## Training Environment
+
+Model training was conducted on the following environment:
+
+-1 x NVIDIA A100 SXM GPU (RunPod)
+-16 vCPUs, 251 GB RAM
+-PyTorch 2.1, CUDA 11.8, Ubuntu 22.04
+-Storage: 20 GB disk + 20 GB pod volume
+-Environment: On-Demand – Secure Cloud
+-SSH access via Visual Studio Code
+
+
+## Training Data
+
+- `trainA`: Real-world images (landscapes, portraits, nature scenes, etc.)
+- `trainB`: Paintings of the selected artist
+-  Image resolution: 512×512 pixel
   
 
 
+## Training Parameters
 
-## Eğitim Parametreleri 
-
-Monet ve Munch için:
+For Monet and Munch:
 bash
 --dataroot ./datasets/monet_style \
 --name cut_monet_final \
@@ -57,7 +55,7 @@ bash
 --lambda_identity 0.5 \
 --gpu_ids 0
 
-Van Gogh için: 
+For Van Gogh:
 bash
 --dataroot ./datasets/monet_style \
 --name cut_monet_final \
@@ -69,35 +67,33 @@ bash
 --lambda_identity 1 \
 --gpu_ids 0
 
-##  Kurulum
+##  Setup Instructions
 
-1. Projeyi GitHub'dan klonlayın:
+1. Clone the repository:
 
 bash
 git clone https://github.com/haticenuryalman/bitirme_projesi_.git
 cd bitirme_projesi_
 
-2. Gerekli dosyaları Drive'dan indirin:
-Proje boyutu kısıtlamalarından dolayı gerekli olan tüm dosyalar GitHub’a yüklenememiştir. Eksik dosyalar için aşağıdaki Google Drive bağlantısını kullanabilirsiniz:
-
-Drive Linki:
+2. Download required files from Google Drive:
+Due to GitHub file size limitations, some files are stored externally.
+Access the missing files here:  
 https://drive.google.com/drive/folders/1DISV_y1VAWoDyVXgU8dsC7gF5Nq-v23-?usp=sharing
 
-3.Sanal ortam oluşturun (isteğe bağlı):
+3.(Optional) Create a virtual environment:
 python -m venv venv
-source venv/bin/activate  # (Windows için: venv\Scripts\activate)
+source venv/bin/activate  # (On Windows : venv\Scripts\activate)
 
-4. Gereksinimleri yükleyin:
+4. Install dependencies:
 pip install -r requirements.txt
 
-5. OpenAI API anahtarını .env dosyasına ekleyin:
+5. Add your OpenAI API key to a .env file:
 OPENAI_API_KEY=your_openai_key_here
 
-6. Uygulamayı başlatın:
+6. Run the application:
 python app.py
-Tarayıcıda şu adrese giderek uygulamayı kullanabilirsiniz:
 
-
+Visit the app at:  
 http://localhost:5000
 
 
