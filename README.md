@@ -98,5 +98,3 @@ Visit the app at:
 http://localhost:5000
 
 
-
-
