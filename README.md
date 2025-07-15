@@ -69,12 +69,12 @@ bash
 
 ##  Setup Instructions
 
-1. Clone the repository:  
+1. Clone the repository:
 
+```bash
+git clone https://github.com/haticenuryalman/bitirme_projesi_.git
+cd bitirme_projesi_
 
-(```bash)  
-   git clone https://github.com/haticenuryalman/bitirme_projesi_.git  
-   cd bitirme_projesi_  
 
 2. Download required files from Google Drive:  
 Due to GitHub file size limitations, some files are stored externally.  
