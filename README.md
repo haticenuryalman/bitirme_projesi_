@@ -69,32 +69,33 @@ bash
 
 ##  Setup Instructions
 
-1. ** Clone the repository **
+1. Clone the repository 
 
    
 ``` bash
 git clone https://github.com/haticenuryalman/bitirme_projesi_.git
 cd bitirme_projesi_ 
-
-2. Download required files from Google Drive:  
-Due to GitHub file size limitations, some files are stored externally.  
+ ``` 
+2. Download required files from Google Drive:
+   
+``` Due to GitHub file size limitations, some files are stored externally.  
 Access the missing files here:  
 https://drive.google.com/drive/folders/1DISV_y1VAWoDyVXgU8dsC7gF5Nq-v23-?usp=sharing  
-
-3. Create a virtual environment(Optional):  
-python -m venv venv  
+``` 
+4. Create a virtual environment(Optional):  
+```  python -m venv venv  
 source venv/bin/activate  # (On Windows : venv\Scripts\activate)  
-
-4. Install dependencies:
-pip install -r requirements.txt  
-
-5. Add your OpenAI API key to a .env file:
-OPENAI_API_KEY=your_openai_key_here  
-
-6. Run the application:
-python app.py  
+``` 
+5. Install dependencies:
+``` pip install -r requirements.txt  
+``` 
+6. Add your OpenAI API key to a .env file:
+``` OPENAI_API_KEY=your_openai_key_here  
+``` 
+7. Run the application:
+``` python app.py  
 
 Visit the app at:  
 http://localhost:5000
 
-
+``` 
