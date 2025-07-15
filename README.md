@@ -87,10 +87,12 @@ https://drive.google.com/drive/folders/1DISV_y1VAWoDyVXgU8dsC7gF5Nq-v23-?usp=sha
 source venv/bin/activate  # (On Windows : venv\Scripts\activate)  
 ``` 
 5. Install dependencies:
-``` pip install -r requirements.txt  
+```bash
+pip install -r requirements.txt  
 ``` 
 6. Add your OpenAI API key to a .env file:
-``` OPENAI_API_KEY=your_openai_key_here  
+```bash
+OPENAI_API_KEY=your_openai_key_here  
 ``` 
 7. Run the application:
 ``` python app.py  
