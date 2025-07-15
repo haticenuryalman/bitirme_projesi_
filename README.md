@@ -83,7 +83,8 @@ Access the missing files here:
 https://drive.google.com/drive/folders/1DISV_y1VAWoDyVXgU8dsC7gF5Nq-v23-?usp=sharing  
 ``` 
 4. Create a virtual environment(Optional):  
-```  python -m venv venv  
+```bash
+python -m venv venv  
 source venv/bin/activate  # (On Windows : venv\Scripts\activate)  
 ``` 
 5. Install dependencies:
@@ -95,7 +96,8 @@ pip install -r requirements.txt
 OPENAI_API_KEY=your_openai_key_here  
 ``` 
 7. Run the application:
-``` python app.py  
+```bash
+python app.py  
 
 Visit the app at:  
 http://localhost:5000
