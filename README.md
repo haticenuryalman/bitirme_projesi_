@@ -75,10 +75,10 @@ bash
 git clone https://github.com/haticenuryalman/bitirme_projesi_.git
 cd bitirme_projesi_  
 
-2. Download required files from Google Drive:
-Due to GitHub file size limitations, some files are stored externally.
+2. Download required files from Google Drive:  
+Due to GitHub file size limitations, some files are stored externally.  
 Access the missing files here:  
-https://drive.google.com/drive/folders/1DISV_y1VAWoDyVXgU8dsC7gF5Nq-v23-?usp=sharing
+https://drive.google.com/drive/folders/1DISV_y1VAWoDyVXgU8dsC7gF5Nq-v23-?usp=sharing  
 
 3.(Optional) Create a virtual environment:
 python -m venv venv
