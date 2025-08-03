@@ -102,4 +102,6 @@ python app.py
 Visit the app at:  
 http://localhost:5000
 
-``` 
+```
+
+For a detailed explanation and demonstration of the project, check out the YouTube video here: https://www.youtube.com/watch?v=pwvWEmk1RvU
